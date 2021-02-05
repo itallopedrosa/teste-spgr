@@ -1,0 +1,638 @@
+2021-02-05 02:45:17.600 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2021-02-05 02:45:18.217 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2021-02-05 02:45:18.238 +00:00 [INF] Creating key {829c3f57-362d-4a69-b16b-f89519de42b9} with creation date 2021-02-05 02:45:18Z, activation date 2021-02-05 02:45:18Z, and expiration date 2021-05-06 02:45:18Z.
+2021-02-05 02:45:18.264 +00:00 [WRN] No XML encryptor configured. Key {829c3f57-362d-4a69-b16b-f89519de42b9} may be persisted to storage in unencrypted form.
+2021-02-05 02:45:18.272 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-829c3f57-362d-4a69-b16b-f89519de42b9.xml'.
+2021-02-05 02:47:26.796 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 97
+2021-02-05 02:47:26.903 +00:00 [INF] CORS policy execution successful.
+2021-02-05 02:47:26.906 +00:00 [WRN] Failed to determine the https port for redirect.
+2021-02-05 02:47:27.252 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 02:47:27.255 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000001, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 02:47:27.259 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000001, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 02:47:27.658 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000001, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 02:47:27.675 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000001, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 02:47:27.682 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+Referer:http://192.168.15.128/
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Origin:http://192.168.15.128
+Content-Length:97
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 02:47:27.688 +00:00 [INF] Request finished in 895.4176ms 502 
+2021-02-05 02:47:41.848 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 126
+2021-02-05 02:47:41.850 +00:00 [INF] CORS policy execution successful.
+2021-02-05 02:47:41.853 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 02:47:41.853 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000002, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 02:47:41.853 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000002, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 02:47:41.861 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000002, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 02:47:41.862 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000002, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 02:47:41.863 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=itallo.pedrosa&password=sdsds&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+Referer:http://192.168.15.128/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Origin:http://192.168.15.128
+Content-Length:126
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 02:47:41.863 +00:00 [INF] Request finished in 15.2232ms 502 
+2021-02-05 02:47:44.132 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 126
+2021-02-05 02:47:44.137 +00:00 [INF] CORS policy execution successful.
+2021-02-05 02:47:44.143 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 02:47:44.143 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000003, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 02:47:44.144 +00:00 [INF] requestId: 0HM69G1FN8Q4B:00000003, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 02:47:44.150 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000003, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 02:47:44.151 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000003, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 02:47:44.151 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=itallo.pedrosa&password=sdsds&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+Referer:http://192.168.15.128/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Origin:http://192.168.15.128
+Content-Length:126
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 02:47:44.152 +00:00 [INF] Request finished in 21.2617ms 502 
+2021-02-05 02:47:53.294 +00:00 [INF] Request starting HTTP/1.1 GET http://192.168.15.128/gateway  
+2021-02-05 02:47:53.521 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000004, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:47:53.521 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000004, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:47:53.522 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000004, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/gateway, request method: GET
+2021-02-05 02:47:53.522 +00:00 [INF] Request: http 192.168.15.128/gateway  
+Request headers:
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 404: 
+Response headers: 
+
+2021-02-05 02:47:53.523 +00:00 [INF] Request finished in 229.1301ms 404 
+2021-02-05 02:47:56.819 +00:00 [INF] Request starting HTTP/1.1 GET http://192.168.15.128/gateway  
+2021-02-05 02:47:56.826 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000005, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:47:56.827 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000005, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:47:56.828 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000005, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/gateway, request method: GET
+2021-02-05 02:47:56.829 +00:00 [INF] Request: http 192.168.15.128/gateway  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 404: 
+Response headers: 
+
+2021-02-05 02:47:56.831 +00:00 [INF] Request finished in 11.5527ms 404 
+2021-02-05 02:47:57.241 +00:00 [INF] Request starting HTTP/1.1 GET http://192.168.15.128/gateway  
+2021-02-05 02:47:57.248 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000006, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:47:57.249 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000006, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:47:57.250 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000006, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/gateway, request method: GET
+2021-02-05 02:47:57.251 +00:00 [INF] Request: http 192.168.15.128/gateway  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 404: 
+Response headers: 
+
+2021-02-05 02:47:57.252 +00:00 [INF] Request finished in 10.7999ms 404 
+2021-02-05 02:47:57.575 +00:00 [INF] Request starting HTTP/1.1 GET http://192.168.15.128/gateway  
+2021-02-05 02:47:57.578 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000007, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:47:57.579 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000007, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:47:57.579 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000007, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/gateway, request method: GET
+2021-02-05 02:47:57.579 +00:00 [INF] Request: http 192.168.15.128/gateway  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 404: 
+Response headers: 
+
+2021-02-05 02:47:57.580 +00:00 [INF] Request finished in 5.8008ms 404 
+2021-02-05 02:48:17.504 +00:00 [INF] Request starting HTTP/1.1 GET http://192.168.15.128/gateway  
+2021-02-05 02:48:17.508 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000008, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:48:17.508 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000008, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET.
+2021-02-05 02:48:17.508 +00:00 [WRN] requestId: 0HM69G1FN8Q4B:00000008, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /gateway, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/gateway, request method: GET
+2021-02-05 02:48:17.509 +00:00 [INF] Request: http 192.168.15.128/gateway  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 404: 
+Response headers: 
+
+2021-02-05 02:48:17.511 +00:00 [INF] Request finished in 6.2053ms 404 
+2021-02-05 02:49:35.140 +00:00 [INF] Request starting HTTP/1.1 GET http://localhost/  
+2021-02-05 02:49:35.144 +00:00 [WRN] requestId: 0HM69G1FN8Q4C:00000001, previousRequestId: no previous request id, message: DownstreamRouteFinderMiddleware setting pipeline errors. IDownstreamRouteFinder returned Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /, verb: GET.
+2021-02-05 02:49:35.144 +00:00 [WRN] requestId: 0HM69G1FN8Q4C:00000001, previousRequestId: no previous request id, message: Failed to match ReRoute configuration for upstream path: /, verb: GET.
+2021-02-05 02:49:35.144 +00:00 [WRN] requestId: 0HM69G1FN8Q4C:00000001, previousRequestId: no previous request id, message: Error Code: UnableToFindDownstreamRouteError Message: Failed to match ReRoute configuration for upstream path: /, verb: GET. errors found in ResponderMiddleware. Setting error response for request path:/, request method: GET
+2021-02-05 02:49:35.145 +00:00 [INF] Request: http localhost/  
+Request headers:
+Accept:*/*
+Host:localhost
+User-Agent:curl/7.64.0
+Response: 404: 
+Response headers: 
+
+2021-02-05 02:49:35.146 +00:00 [INF] Request finished in 6.4597ms 404 
+2021-02-05 02:50:51.386 +00:00 [INF] Request starting HTTP/1.1 GET http://192.168.15.128/dominio/ModalidadeExecucao  
+2021-02-05 02:50:51.468 +00:00 [INF] requestId: 0HM69G1FN8Q4D:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /api/v1/dominio/ModalidadeExecucao
+2021-02-05 02:50:51.468 +00:00 [INF] requestId: 0HM69G1FN8Q4D:00000001, previousRequestId: no previous request id, message: No authentication needed for /dominio/ModalidadeExecucao
+2021-02-05 02:50:51.468 +00:00 [INF] requestId: 0HM69G1FN8Q4D:00000001, previousRequestId: no previous request id, message: /api/v1/dominio/ModalidadeExecucao route does not require user to be authorised
+2021-02-05 02:50:51.491 +00:00 [WRN] requestId: 0HM69G1FN8Q4D:00000001, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 02:50:51.492 +00:00 [WRN] requestId: 0HM69G1FN8Q4D:00000001, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/dominio/ModalidadeExecucao, request method: GET
+2021-02-05 02:50:51.493 +00:00 [INF] Request: http 192.168.15.128/dominio/ModalidadeExecucao  
+Request headers:
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 02:50:51.494 +00:00 [INF] Request finished in 107.5906ms 502 
+2021-02-05 02:57:30.396 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 97
+2021-02-05 02:57:30.432 +00:00 [INF] CORS policy execution successful.
+2021-02-05 02:57:30.436 +00:00 [INF] requestId: 0HM69G1FN8Q4E:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 02:57:30.437 +00:00 [INF] requestId: 0HM69G1FN8Q4E:00000001, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 02:57:30.437 +00:00 [INF] requestId: 0HM69G1FN8Q4E:00000001, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 02:57:30.478 +00:00 [WRN] requestId: 0HM69G1FN8Q4E:00000001, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 02:57:30.479 +00:00 [WRN] requestId: 0HM69G1FN8Q4E:00000001, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 02:57:30.480 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+Referer:http://192.168.15.128/
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Origin:http://192.168.15.128
+Content-Length:97
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 02:57:30.481 +00:00 [INF] Request finished in 84.6592ms 502 
+2021-02-05 02:57:39.846 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 97
+2021-02-05 02:57:39.852 +00:00 [INF] requestId: 0HM69G1FN8Q4E:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 02:57:39.852 +00:00 [INF] requestId: 0HM69G1FN8Q4E:00000002, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 02:57:39.853 +00:00 [INF] requestId: 0HM69G1FN8Q4E:00000002, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 02:57:39.861 +00:00 [WRN] requestId: 0HM69G1FN8Q4E:00000002, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 02:57:39.861 +00:00 [WRN] requestId: 0HM69G1FN8Q4E:00000002, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 02:57:39.861 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Upgrade-Insecure-Requests:1
+Content-Length:97
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 02:57:39.862 +00:00 [INF] Request finished in 16.4568ms 502 
+2021-02-05 02:59:56.187 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 97
+2021-02-05 02:59:56.187 +00:00 [INF] CORS policy execution successful.
+2021-02-05 02:59:56.191 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 02:59:56.191 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000001, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 02:59:56.191 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000001, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 02:59:56.200 +00:00 [WRN] requestId: 0HM69G1FN8Q4F:00000001, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 02:59:56.201 +00:00 [WRN] requestId: 0HM69G1FN8Q4F:00000001, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 02:59:56.201 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Cache-Control:max-age=0
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+Referer:http://192.168.15.128/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Origin:http://192.168.15.128
+Content-Length:97
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 02:59:56.202 +00:00 [INF] Request finished in 15.3869ms 502 
+2021-02-05 03:00:27.975 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 97
+2021-02-05 03:00:28.040 +00:00 [INF] CORS policy execution successful.
+2021-02-05 03:00:28.043 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 03:00:28.043 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000002, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 03:00:28.044 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000002, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 03:00:28.105 +00:00 [WRN] requestId: 0HM69G1FN8Q4F:00000002, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 03:00:28.106 +00:00 [WRN] requestId: 0HM69G1FN8Q4F:00000002, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 03:00:28.107 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Cache-Control:max-age=0
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+Referer:http://192.168.15.128/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Origin:http://192.168.15.128
+Content-Length:97
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 03:00:28.108 +00:00 [INF] Request finished in 132.3581ms 502 
+2021-02-05 03:00:41.134 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 97
+2021-02-05 03:00:41.166 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 03:00:41.167 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000003, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 03:00:41.167 +00:00 [INF] requestId: 0HM69G1FN8Q4F:00000003, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 03:00:41.177 +00:00 [WRN] requestId: 0HM69G1FN8Q4F:00000003, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 03:00:41.178 +00:00 [WRN] requestId: 0HM69G1FN8Q4F:00000003, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 03:00:41.178 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Cache-Control:max-age=0
+Content-Type:application/x-www-form-urlencoded
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Upgrade-Insecure-Requests:1
+Content-Length:97
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 03:00:41.179 +00:00 [INF] Request finished in 45.2789ms 502 
+2021-02-05 03:08:13.862 +00:00 [INF] Request starting HTTP/1.1 POST http://192.168.15.128/connect/token application/x-www-form-urlencoded 126
+2021-02-05 03:08:13.888 +00:00 [INF] CORS policy execution successful.
+2021-02-05 03:08:13.891 +00:00 [INF] requestId: 0HM69G1FN8Q4G:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 03:08:13.891 +00:00 [INF] requestId: 0HM69G1FN8Q4G:00000001, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 03:08:13.891 +00:00 [INF] requestId: 0HM69G1FN8Q4G:00000001, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 03:08:13.924 +00:00 [WRN] requestId: 0HM69G1FN8Q4G:00000001, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 03:08:13.924 +00:00 [WRN] requestId: 0HM69G1FN8Q4G:00000001, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Name or service not known
+ ---> System.Net.Sockets.SocketException (0xFFFDFFFF): Name or service not known
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 03:08:13.925 +00:00 [INF] Request: http 192.168.15.128/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=itallo.pedrosa&password=lllll&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.5
+Host:192.168.15.128
+Referer:http://192.168.15.128/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Gecko/20100101 Firefox/78.0
+Origin:http://192.168.15.128
+Content-Length:126
+X-Forwarded-For:192.168.15.166
+X-Forwarded-Host:192.168.15.128
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:4a946e747170
+X-Real-Ip:192.168.15.166
+Response: 502: 
+Response headers: 
+
+2021-02-05 03:08:13.926 +00:00 [INF] Request finished in 63.2963ms 502 
