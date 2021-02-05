@@ -636,3 +636,1207 @@ Response: 502:
 Response headers: 
 
 2021-02-05 03:08:13.926 +00:00 [INF] Request finished in 63.2963ms 502 
+2021-02-05 21:23:16.874 +00:00 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+2021-02-05 21:23:19.137 +00:00 [INF] User profile is available. Using '/root/.aspnet/DataProtection-Keys' as key repository; keys will not be encrypted at rest.
+2021-02-05 21:23:19.157 +00:00 [INF] Creating key {c3ca0032-b85e-49fd-a2b8-f24d2eaa8e6c} with creation date 2021-02-05 21:23:19Z, activation date 2021-02-05 21:23:19Z, and expiration date 2021-05-06 21:23:19Z.
+2021-02-05 21:23:19.175 +00:00 [WRN] No XML encryptor configured. Key {c3ca0032-b85e-49fd-a2b8-f24d2eaa8e6c} may be persisted to storage in unencrypted form.
+2021-02-05 21:23:19.180 +00:00 [INF] Writing data to file '/root/.aspnet/DataProtection-Keys/key-c3ca0032-b85e-49fd-a2b8-f24d2eaa8e6c.xml'.
+2021-02-05 21:24:22.320 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 97
+2021-02-05 21:24:22.346 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:22.349 +00:00 [WRN] Failed to determine the https port for redirect.
+2021-02-05 21:24:22.620 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:22.625 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000001, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:22.628 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000001, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:23.244 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000001, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:23.258 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000001, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:23.265 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:97
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:23.271 +00:00 [INF] Request finished in 955.4398ms 502 
+2021-02-05 21:24:27.326 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:27.327 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:27.332 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:27.332 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000002, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:27.332 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000002, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:27.354 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000002, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:27.355 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000002, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:27.356 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:27.357 +00:00 [INF] Request finished in 31.311ms 502 
+2021-02-05 21:24:30.294 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:30.299 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:30.306 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:30.307 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000003, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:30.307 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000003, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:30.331 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000003, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:30.332 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000003, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:30.333 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:30.334 +00:00 [INF] Request finished in 41.7504ms 502 
+2021-02-05 21:24:30.827 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:30.831 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:30.836 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:30.837 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000004, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:30.838 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000004, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:30.927 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000004, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:30.929 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000004, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:30.930 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:30.931 +00:00 [INF] Request finished in 104.221ms 502 
+2021-02-05 21:24:31.130 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:31.133 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:31.137 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000005, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:31.138 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000005, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:31.138 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000005, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:31.211 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000005, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:31.212 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000005, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:31.212 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:31.214 +00:00 [INF] Request finished in 83.4603ms 502 
+2021-02-05 21:24:31.472 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:31.474 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:31.479 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000006, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:31.480 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000006, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:31.480 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000006, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:31.516 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000006, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:31.517 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000006, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:31.517 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:31.518 +00:00 [INF] Request finished in 45.9464ms 502 
+2021-02-05 21:24:38.591 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:38.593 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:38.599 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000007, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:38.599 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000007, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:38.599 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000007, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:38.754 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000007, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:38.755 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000007, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:38.756 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:38.757 +00:00 [INF] Request finished in 165.8913ms 502 
+2021-02-05 21:24:39.980 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:39.981 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:39.986 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000008, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:39.986 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000008, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:39.986 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000008, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:40.035 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000008, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:40.037 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000008, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:40.038 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:40.040 +00:00 [INF] Request finished in 59.9863ms 502 
+2021-02-05 21:24:40.803 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:40.804 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:40.809 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000009, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:40.810 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000009, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:40.810 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000009, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:40.851 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000009, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:40.852 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000009, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:40.852 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:40.854 +00:00 [INF] Request finished in 50.2562ms 502 
+2021-02-05 21:24:41.443 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:41.444 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:41.447 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000A, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:41.447 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000A, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:41.448 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000A, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:41.485 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000A, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:41.486 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000A, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:41.487 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:41.488 +00:00 [INF] Request finished in 44.8756ms 502 
+2021-02-05 21:24:42.021 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 128
+2021-02-05 21:24:42.022 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:42.025 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000B, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:42.026 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000B, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:42.026 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000B, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:42.109 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000B, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:42.110 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000B, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:42.110 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=password&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&username=08056275029&password=sdsdsdsdsd&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:128
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:42.112 +00:00 [INF] Request finished in 90.3955ms 502 
+2021-02-05 21:24:44.316 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 97
+2021-02-05 21:24:44.317 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:44.320 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000C, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:44.320 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000C, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:44.320 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000C, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:44.341 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000C, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:44.341 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000C, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:44.342 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:97
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:44.342 +00:00 [INF] Request finished in 26.1871ms 502 
+2021-02-05 21:24:48.402 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 97
+2021-02-05 21:24:48.403 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:24:48.406 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000D, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:24:48.406 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000D, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:24:48.406 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000D, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:24:48.529 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000D, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:24:48.530 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000D, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:24:48.530 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:97
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:24:48.531 +00:00 [INF] Request finished in 129.3085ms 502 
+2021-02-05 21:25:03.679 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 97
+2021-02-05 21:25:03.679 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:25:03.682 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000E, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:25:03.682 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000E, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:25:03.683 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000E, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:25:03.709 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000E, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:25:03.709 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000E, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:25:03.709 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:97
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:25:03.710 +00:00 [INF] Request finished in 31.349ms 502 
+2021-02-05 21:25:08.790 +00:00 [INF] Request starting HTTP/1.1 GET http://10.2.15.126/connect/token  
+2021-02-05 21:25:09.017 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000F, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:25:09.017 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000F, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:25:09.017 +00:00 [INF] requestId: 0HM6A3HJT4FED:0000000F, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:25:09.053 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000F, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:25:09.054 +00:00 [WRN] requestId: 0HM6A3HJT4FED:0000000F, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: GET
+2021-02-05 21:25:09.054 +00:00 [INF] Request: http 10.2.15.126/connect/token  
+Request headers:
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:25:09.055 +00:00 [INF] Request finished in 265.7076ms 502 
+2021-02-05 21:25:11.672 +00:00 [INF] Request starting HTTP/1.1 GET http://10.2.15.126/connect/token  
+2021-02-05 21:25:11.675 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000010, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:25:11.675 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000010, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:25:11.675 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000010, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:25:11.738 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000010, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:25:11.739 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000010, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: GET
+2021-02-05 21:25:11.739 +00:00 [INF] Request: http 10.2.15.126/connect/token  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:25:11.740 +00:00 [INF] Request finished in 68.9487ms 502 
+2021-02-05 21:25:12.452 +00:00 [INF] Request starting HTTP/1.1 GET http://10.2.15.126/connect/token  
+2021-02-05 21:25:12.454 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000011, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:25:12.455 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000011, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:25:12.455 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000011, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:25:12.488 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000011, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:25:12.488 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000011, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: GET
+2021-02-05 21:25:12.489 +00:00 [INF] Request: http 10.2.15.126/connect/token  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:25:12.490 +00:00 [INF] Request finished in 38.0136ms 502 
+2021-02-05 21:25:12.704 +00:00 [INF] Request starting HTTP/1.1 GET http://10.2.15.126/connect/token  
+2021-02-05 21:25:12.707 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000012, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:25:12.707 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000012, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:25:12.707 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000012, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:25:12.754 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000012, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:25:12.755 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000012, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: GET
+2021-02-05 21:25:12.755 +00:00 [INF] Request: http 10.2.15.126/connect/token  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:25:12.756 +00:00 [INF] Request finished in 52.153ms 502 
+2021-02-05 21:25:12.899 +00:00 [INF] Request starting HTTP/1.1 GET http://10.2.15.126/connect/token  
+2021-02-05 21:25:12.902 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000013, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:25:12.903 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000013, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:25:12.903 +00:00 [INF] requestId: 0HM6A3HJT4FED:00000013, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:25:12.949 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000013, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:25:12.950 +00:00 [WRN] requestId: 0HM6A3HJT4FED:00000013, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: GET
+2021-02-05 21:25:12.950 +00:00 [INF] Request: http 10.2.15.126/connect/token  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:25:12.951 +00:00 [INF] Request finished in 51.4763ms 502 
+2021-02-05 21:26:50.947 +00:00 [INF] Request starting HTTP/1.1 GET http://10.2.15.126/connect/token  
+2021-02-05 21:26:50.950 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000001, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:26:50.950 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000001, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:26:50.951 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000001, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:26:50.990 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000001, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:26:50.991 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000001, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: GET
+2021-02-05 21:26:50.991 +00:00 [INF] Request: http 10.2.15.126/connect/token  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:26:50.992 +00:00 [INF] Request finished in 44.9529ms 502 
+2021-02-05 21:26:51.654 +00:00 [INF] Request starting HTTP/1.1 GET http://10.2.15.126/connect/token  
+2021-02-05 21:26:51.657 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000002, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:26:51.657 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000002, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:26:51.658 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000002, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:26:51.680 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000002, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:26:51.681 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000002, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: GET
+2021-02-05 21:26:51.681 +00:00 [INF] Request: http 10.2.15.126/connect/token  
+Request headers:
+Cache-Control:max-age=0
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:26:51.682 +00:00 [INF] Request finished in 27.583ms 502 
+2021-02-05 21:26:54.933 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 97
+2021-02-05 21:26:54.934 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:26:54.937 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000003, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:26:54.938 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000003, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:26:54.938 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000003, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:26:54.980 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000003, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:26:54.981 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000003, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:26:54.981 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:97
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:26:54.983 +00:00 [INF] Request finished in 49.0642ms 502 
+2021-02-05 21:27:00.006 +00:00 [INF] Request starting HTTP/1.1 GET http://10.2.15.126/connect/token  
+2021-02-05 21:27:00.008 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000004, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:27:00.009 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000004, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:27:00.009 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000004, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:27:00.069 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000004, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:27:00.070 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000004, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: GET
+2021-02-05 21:27:00.070 +00:00 [INF] Request: http 10.2.15.126/connect/token  
+Request headers:
+Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Upgrade-Insecure-Requests:1
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:27:00.071 +00:00 [INF] Request finished in 64.6967ms 502 
+2021-02-05 21:27:07.508 +00:00 [INF] Request starting HTTP/1.1 POST http://10.2.15.126/connect/token application/x-www-form-urlencoded 97
+2021-02-05 21:27:07.509 +00:00 [INF] CORS policy execution successful.
+2021-02-05 21:27:07.511 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000005, previousRequestId: no previous request id, message: EndpointRateLimiting is not enabled for /connect/{everything}
+2021-02-05 21:27:07.511 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000005, previousRequestId: no previous request id, message: No authentication needed for /connect/token
+2021-02-05 21:27:07.512 +00:00 [INF] requestId: 0HM6A3HJT4FEE:00000005, previousRequestId: no previous request id, message: /connect/{everything} route does not require user to be authorised
+2021-02-05 21:27:07.542 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000005, previousRequestId: no previous request id, message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context)
+2021-02-05 21:27:07.542 +00:00 [WRN] requestId: 0HM6A3HJT4FEE:00000005, previousRequestId: no previous request id, message: Error Code: ConnectionToDownstreamServiceError Message: Error connecting to downstream service, exception: System.Net.Http.HttpRequestException: Resource temporarily unavailable
+ ---> System.Net.Sockets.SocketException (11): Resource temporarily unavailable
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.ConnectHelper.ConnectAsync(String host, Int32 port, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectAsync(HttpRequestMessage request, Boolean allowHttp2, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.CreateHttp11ConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.GetHttpConnectionAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithRetryAsync(HttpRequestMessage request, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.FinishSendAsyncBuffered(Task`1 sendTask, HttpRequestMessage request, CancellationTokenSource cts, Boolean disposeCts)
+   at Ocelot.Requester.HttpClientHttpRequester.GetResponse(DownstreamContext context) errors found in ResponderMiddleware. Setting error response for request path:/connect/token, request method: POST
+2021-02-05 21:27:07.543 +00:00 [INF] Request: http 10.2.15.126/connect/token  grant_type=client_credentials&client_id=SISGP.Web&scope=SISGP.ProgramaGestao&client_secret=secret
+Request headers:
+Content-Type:application/x-www-form-urlencoded
+Accept:application/json, text/plain, */*
+Accept-Encoding:gzip, deflate
+Accept-Language:en-US,en;q=0.9,pt-BR;q=0.8,pt;q=0.7
+Host:10.2.15.126
+Referer:http://10.2.15.126/safe/sisgp/programagestao/app/login
+User-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.104 Safari/537.36
+Origin:http://10.2.15.126
+Content-Length:97
+X-Forwarded-For:10.2.28.12
+X-Forwarded-Host:10.2.15.126
+X-Forwarded-Port:80
+X-Forwarded-Prefix:/gateway/
+X-Forwarded-Proto:http
+X-Forwarded-Server:e4f5279de7a8
+X-Real-Ip:10.2.28.12
+Response: 502: 
+Response headers: 
+
+2021-02-05 21:27:07.544 +00:00 [INF] Request finished in 36.0856ms 502 

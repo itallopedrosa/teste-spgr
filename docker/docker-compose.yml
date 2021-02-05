@@ -28,7 +28,7 @@ services:
       - pgd
     
   web-api:
-    image: mcr.microsoft.com/dotnet/aspnet:3.1
+    image: italloap/susep-app:tagname
     working_dir: /app/api/
     command: dotnet Susep.SISRH.WebApi.dll
     volumes:
@@ -46,7 +46,7 @@ services:
       - pgd
 
   api-gateway:
-    image: mcr.microsoft.com/dotnet/aspnet:3.1
+    image: italloap/susep-app:v1
     command: dotnet Susep.SISRH.ApiGateway.dll
     working_dir: /app/gateway/
     volumes:
@@ -68,7 +68,7 @@ services:
       - pgd
 
   web-app:
-    image: mcr.microsoft.com/dotnet/aspnet:3.1
+    image: italloap/susep-app:v1
     command: dotnet Susep.SISRH.WebApp.dll
     working_dir: /app/app/
     volumes:
